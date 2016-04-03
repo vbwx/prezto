@@ -11,3 +11,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+DEFAULT_USER=vbwx
+
+alias rm='trash'
+alias desk='cd ~/Desktop'
+alias update_prezto='cd "${ZDOTDIR:-$HOME}/.zprezto" && git pull && git submodule update --init --recursive'

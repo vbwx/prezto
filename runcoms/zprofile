@@ -8,6 +8,8 @@
 #
 # Browser
 #
+#
+source "${ZDOTDIR:-$HOME}/.zlocal"
 
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
@@ -32,25 +34,8 @@ if [[ -z "$LANG" ]]; then
   export LC_CTYPE='en_US.UTF-8'
 fi
 
-#
-# Paths
-#
-
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
-
-# Set the the list of directories that cd searches.
-# cdpath=(
-#   $cdpath
-# )
-
-# Set the list of directories that Zsh searches for programs.
-path=(
-  /usr/local/opt/coreutils/libexec/gnubin
-  $path
-  .
-)
-export MANPATH="$MANPATH:/usr/local/opt/coreutils/libexec/gnuman"
 
 #
 # Less

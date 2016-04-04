@@ -31,12 +31,12 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'spectrum' \
   'utility' \
+  'syntax-highlighting' \
   'completion' \
   'prompt' \
   'git' \
   'history-substring-search' \
   'autosuggestions' \
-  'syntax-highlighting' \
   'osx' \
   'node' \
   'homebrew'
@@ -44,9 +44,7 @@ zstyle ':prezto:load' pmodule \
 #
 # Autosuggestions
 #
-
-# Set the query found color.
-# zstyle ':prezto:module:autosuggestions:color' found ''
+zstyle ':prezto:module:autosuggestions:color' found 'fg=10'
 
 #
 # Editor

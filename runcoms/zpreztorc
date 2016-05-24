@@ -33,6 +33,8 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'syntax-highlighting' \
   'completion' \
+  'gulp' \
+  'grunt' \
   'prompt' \
   'git' \
   'history-substring-search' \

@@ -42,7 +42,8 @@ zstyle ':prezto:load' pmodule \
   'osx' \
   'node' \
   'ruby' \
-  'homebrew'
+  'homebrew' \
+  'fzf'
 
 #
 # Autosuggestions

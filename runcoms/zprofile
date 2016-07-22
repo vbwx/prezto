@@ -8,7 +8,6 @@
 #
 # Browser
 #
-#
 source "${ZDOTDIR:-$HOME}/.zlocal"
 
 if [[ "$OSTYPE" == darwin* ]]; then
@@ -19,8 +18,8 @@ fi
 # Editors
 #
 
-export EDITOR='/usr/local/bin/atom -w'
-export VISUAL='/usr/local/bin/atom -w'
+export EDITOR='/usr/local/bin/atom'
+export VISUAL='/usr/local/bin/atom'
 export PAGER='less'
 
 #

@@ -18,8 +18,8 @@ fi
 # Editors
 #
 
-export EDITOR='/usr/local/bin/atom'
-export VISUAL='/usr/local/bin/atom'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 #

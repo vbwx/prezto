@@ -18,8 +18,8 @@ fi
 # Editors
 #
 
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'
+export VISUAL='/Applications/MacVim.app/Contents/MacOS/Vim'
 export PAGER='less'
 
 #

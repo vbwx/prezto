@@ -17,4 +17,5 @@ alias update_prezto='cd "${ZDOTDIR:-$HOME}/.zprezto" && git pull && git submodul
 alias vi='/Applications/MacVim.app/Contents/MacOS/Vim --noplugin'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias view='/Applications/MacVim.app/Contents/MacOS/Vim -R --noplugin'
+alias mvim='> /dev/null /usr/local/bin/mvim'
 alias add='awk "{s+=\$1} END {printf \"%.2f\n\", s}"'

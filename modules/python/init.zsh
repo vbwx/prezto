@@ -7,8 +7,8 @@
 #
 
 # Load manually installed pyenv into the shell session.
-if [[ -s "$HOME/.pyenv/bin/pyenv" ]]; then
-  path=("$HOME/.pyenv/bin" $path)
+if [[ "$PYENV_ROOT" && -s "$PYENV_ROOT/bin/pyenv" ]]; then
+  path=("$PYENV_ROOT/bin" $path)
   eval "$(pyenv init -)"
 
 # Load package manager installed pyenv into the shell session.

@@ -13,5 +13,7 @@ fi
 # Customize to your needs...
 alias dir='ls -F'
 alias desk='cd ~/Desktop'
-alias update_prezto='cd "${ZDOTDIR:-$HOME}/.zprezto" && git pull && git submodule update --init --recursive'
+alias update_prezto='(cd "${ZDOTDIR:-$HOME}/.zprezto" && git pull && git submodule update --init --recursive)'
+alias update_npm='npm install -g npm@latest'
+alias update_nvm='(cd "$NVM_DIR" && git fetch origin && git checkout `git describe --abrev=0 --tags --match "v[0-9]*" origin` && . "$NVM_DIR/nvm.sh")'
 alias add='awk "{s+=\$1} END {printf \"%.2f\n\", s}"'

@@ -5,6 +5,7 @@
 #   Robby Russell <robby@planetargon.com>
 #   Suraj N. Kurapati <sunaku@gmail.com>
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
+#   Bernhard Waldbrunner <vbwx01@gmail.com>
 #
 
 # Load dependencies.
@@ -197,4 +198,42 @@ function find-exec {
 # Displays user owned processes status.
 function psu {
   ps -U "${1:-$LOGNAME}" -o 'pid,%cpu,%mem,command' "${(@)argv[2,-1]}"
+}
+
+#
+# Functions added by vbwx
+#
+
+# Displays differences between two branches
+function git-unmerged {
+	branch1=${1:-master}
+	branch2=${2:-HEAD}
+
+	echo; echo "Only in $branch1:"
+	git cherry -v $branch2 $branch1
+
+	echo; echo "Only in $branch2:"
+	git cherry -v $branch1 $branch2
+}
+
+# Starts a Harp server instance with BrowserSync connected to it and opens the local site in a
+# browser
+function harp-serve {
+	harp server &
+	browser-sync start --proxy 'localhost:9000' --files 'public/**/*.jade, public/**/*.md, public/**/*.scss, public/**/*.coffee'
+	open http://localhost:9000/
+}
+
+# Faster find
+function qf {
+	string="$1"
+	shift
+	find . -not -wholename "*.svn*" -iname "*${string}*" "$@"
+}
+
+# Faster grep
+function qgr {
+	string="$1"
+	shift
+	grep --exclude-dir=".svn" -slriI "$@" "$string" *
 }

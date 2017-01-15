@@ -8,7 +8,6 @@
 #
 # Browser
 #
-source "${ZDOTDIR:-$HOME}/.zlocal"
 
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
@@ -65,3 +64,8 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+#
+# Local variables, etc.
+#
+[ -r "${ZDOTDIR:-$HOME}/.localenv" ] && source "${ZDOTDIR:-$HOME}/.localenv"

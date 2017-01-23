@@ -237,3 +237,8 @@ function qgr {
 	shift
 	grep --exclude-dir=".svn" -slriI "$@" "$string" *
 }
+
+# Use Vim as man page viewer
+function viman {
+	vim -c "Man $1 $2" -c 'silent only'
+}

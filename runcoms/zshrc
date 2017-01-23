@@ -14,6 +14,7 @@ fi
 setopt cdablevars
 
 # Aliases
+alias man='viman'
 alias dir='ls -F'
 alias update_prezto='(
 	cd "${ZDOTDIR:-$HOME}/.zprezto"

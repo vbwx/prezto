@@ -224,13 +224,6 @@ function harp-serve {
 	open http://localhost:9000/
 }
 
-# Faster find
-function qf {
-	string="$1"
-	shift
-	find . -not -wholename "*.svn*" -iname "*${string}*" "$@"
-}
-
 # Use Vim as man page viewer
 function viman {
 	vim -c "Man $1 $2" -c 'silent only'

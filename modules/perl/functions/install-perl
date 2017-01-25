@@ -1,0 +1,14 @@
+command -v perlbrew > /dev/null || . "${PERLBREW_ROOT:-$HOME/.perlbrew}/etc/bashrc" || {
+	echo "Command not found: perlbrew" >&2
+	exit 127
+}
+
+local ver
+
+perlbrew available
+echo -n "Enter the Perl version to be installed: "
+read ver
+
+perlbrew install -n $ver
+perlbrew alias -f create perl-$ver default
+perlbrew switch default

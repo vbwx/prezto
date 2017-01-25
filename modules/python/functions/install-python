@@ -1,0 +1,13 @@
+command -v pyenv > /dev/null || {
+	echo "Command not found: pyenv" >&2
+	exit 127
+}
+[ $PYENV_SHELL ] || eval "$(pyenv init -)"
+
+local ver
+
+pyenv install --list
+echo -n "Enter the Python version to be installed: "
+read ver
+
+pyenv install $ver && pyenv global $ver && pyenv rehash

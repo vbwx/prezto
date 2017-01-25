@@ -1,0 +1,16 @@
+command -v nvm > /dev/null || . "${NVM_DIR:-$HOME/.nvm}/nvm.sh" || {
+	echo "Command not found: nvm" >&2
+	exit 127
+}
+
+local ver
+
+nvm ls-remote
+echo -n "Enter the Node.js version to be installed: "
+read ver
+
+nvm install $ver --reinstall-packages-from=node
+nvm use $ver
+nvm alias default $ver
+
+ln -shf "${NVM_DIR:-$HOME/.nvm}/versions/node/$(nvm current)" /usr/local/node

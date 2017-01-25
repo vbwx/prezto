@@ -1,0 +1,13 @@
+command -v rbenv > /dev/null || {
+	echo "Command not found: rbenv" >&2
+	exit 127
+}
+[ $RBENV_SHELL ] || eval "$(rbenv init -)"
+
+local ver
+
+rbenv install --list
+echo -n "Enter the Ruby version to be installed: "
+read ver
+
+rbenv install $ver && rbenv global $ver && rbenv rehash

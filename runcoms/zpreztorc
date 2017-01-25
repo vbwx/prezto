@@ -45,6 +45,8 @@ zstyle ':prezto:load' pmodule \
   'python'                    \
   'perl'                      \
   'homebrew'                  \
+  'harp'                      \
+  'vim'                       \
   'fzf'
 
 #

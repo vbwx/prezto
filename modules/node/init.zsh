@@ -8,11 +8,11 @@
 
 # Load manually installed NVM into the shell session.
 if [[ -s "${NVM_DIR:-$HOME/.nvm}/nvm.sh" ]]; then
-  source "${NVM_DIR:-$HOME/.nvm}/nvm.sh"
+  source "${NVM_DIR:-$HOME/.nvm}/nvm.sh" --no-use
 
 # Load package manager installed NVM into the shell session.
 elif (( $+commands[brew] )) && [[ -d "$(brew --prefix nvm 2>/dev/null)" ]]; then
-  source $(brew --prefix nvm)/nvm.sh
+  source $(brew --prefix nvm)/nvm.sh --no-use
 
 # Load manually installed nodenv into the shell session.
 elif [[ -s "$HOME/.nodenv/bin/nodenv" ]]; then

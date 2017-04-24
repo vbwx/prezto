@@ -8,7 +8,7 @@
 
 # Load manually installed NVM into the shell session.
 if [[ -s "${NVM_DIR:-$HOME/.nvm}/nvm.sh" ]]; then
-  source "${NVM_DIR:-$HOME/.nvm}/nvm.sh" --no-use
+  source "${NVM_DIR:-$HOME/.nvm}/nvm.sh" $NVM_ARGS
 
 # Load package manager installed NVM into the shell session.
 elif (( $+commands[brew] )) && [[ -d "$(brew --prefix nvm 2>/dev/null)" ]]; then

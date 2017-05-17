@@ -138,7 +138,7 @@ alias pbp='pbpaste'
 if (( $+commands[curl] )); then
   alias get='curl --continue-at - --location --progress-bar --remote-name --remote-time'
 elif (( $+commands[wget] )); then
-  alias get='wget --continue --progress=bar --timestamping'
+  alias get='wget --continue --progress=bar --timestamping --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15'
 fi
 
 # Resource Usage

@@ -46,7 +46,7 @@ alias scp='noglob scp'
 alias sftp='noglob sftp'
 
 # Define general aliases.
-alias _='sudo'
+alias _='sudo '
 alias b='${(z)BROWSER}'
 alias cp="${aliases[cp]:-cp} -i"
 alias diffu="diff --unified"

@@ -1,0 +1,12 @@
+#
+# Opens Vim as manpage viewer
+#
+# Authors:
+#   Bernhard Waldbrunner <vbwx01@gmail.com>
+#
+
+function viman {
+  vim -R +"Man ${1-} ${2-} | silent only"
+}
+
+viman "$@"

@@ -1,7 +1,0 @@
-function qpdf {
-	if (( $+commands[pandoc] )); then
-		pandoc "$1" -o "${1%.*}.pdf"
-	fi
-}
-
-qpdf "$@"

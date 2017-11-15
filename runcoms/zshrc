@@ -14,7 +14,6 @@ fi
 setopt cdablevars
 
 # Aliases
-alias man='viman'
 alias dir='ls -F'
 alias add='awk "{s+=\$1} END {printf \"%.2f\n\", s}"'
 alias wget='\wget --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 0'

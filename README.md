@@ -9,7 +9,7 @@ Installation
 ------------
 
 Prezto will work with any recent release of Zsh, but the minimum required
-version is 4.3.17.
+version is 4.3.11.
 
   1. Launch Zsh:
 
@@ -89,6 +89,19 @@ accompanying README files to learn of what is available.
      window or tab.
 
      ![sorin theme][2]
+
+### External Modules
+
+  1. By default modules will be loaded from */modules* and */contrib*.
+  2. Additional module directories can be added to the
+     `:prezto:load:pmodule-dirs` setting in *~/.zpreztorc*.
+
+     Note that module names need to be unique or they will cause an error when
+     loading.
+
+     ```console
+     zstyle ':prezto:load' pmodule-dirs $HOME/.zprezto-contrib
+     ```
 
 Customization
 -------------

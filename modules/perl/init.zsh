@@ -39,8 +39,8 @@ fi
 
 if [[ "$OSTYPE" == darwin* ]]; then
   # Perl is slow; cache its output.
-  cache_file="${0:h}/cache.zsh"
-  perl_path="/usr/local/perl"
+  cache_file="${TMPDIR:-/tmp}/prezto-perl-cache.$UID.zsh"
+  perl_path="$HOME/Library/Perl/5.12"
 
   if [[ -f "$perl_path/lib/perl5/local/lib.pm" ]]; then
     if [[ ! -s "$cache_file" ]]; then
@@ -52,12 +52,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
 
   unset cache_file perl_path
 fi
-
-#
-# Load perlbrew
-#
-
-[[ "$PERLBREW_ROOT" && -f "$PERLBREW_ROOT/etc/bashrc" ]] && source "$PERLBREW_ROOT/etc/bashrc"
 
 #
 # Aliases
